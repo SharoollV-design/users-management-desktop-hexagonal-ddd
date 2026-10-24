@@ -3,12 +3,13 @@ package com.jcaa.usersmanagement.domain.factory;
 import java.time.LocalDate;
 import java.util.UUID;
 
+import com.jcaa.usersmanagement.domain.enums.TipoExamen;
 import com.jcaa.usersmanagement.domain.model.Examen;
 import com.jcaa.usersmanagement.domain.valueobject.Ponderacion;
 
 public class ExamenFactory {
     
-    public Examen crearExamen(String titulo, String subjectCode, LocalDate fecha, Ponderacion ponderacion) {
+    public Examen crearExamen(String id, String titulo, String subjectCode, LocalDate fecha, Ponderacion ponderacion, TipoExamen tipoExamen) {
         
         String idGenerado = UUID.randomUUID().toString();
     
@@ -25,7 +26,8 @@ public class ExamenFactory {
                 titulo,
                 subjectCode,
                 fecha,
-                ponderacion
+                ponderacion,
+                tipoExamen
         );
     }
 }
