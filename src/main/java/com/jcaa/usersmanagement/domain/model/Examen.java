@@ -41,7 +41,7 @@ public class Examen {
         return ponderacion.getValor();
     }
 
-    public TipoExamen gTipoExamen(){
+    public TipoExamen getTipoExamen(){
         return tipoExamen;
     }
 }
