@@ -39,7 +39,7 @@ public class RegistrarEstudianteServiceTest {
 
     @Test
     void dadoIdExistente_cuandoSeRegistra_entoncesLanzaExcepcion() {
-        Estudiante existente = new Estudiante("E01", "Luis", "Gómez", "gmontoya@uchile.com", "Ingenieria Civil");
+        Estudiante existente = new Estudiante("E01", "Gabriel", "Montoya", "gmontoya@uchile.com", "Ingenieria Civil");
         when(repositoryPort.findById("E01")).thenReturn(Optional.of(existente));
 
         assertThrows(EstudianteInvalidoExcepcion.class, () -> {
